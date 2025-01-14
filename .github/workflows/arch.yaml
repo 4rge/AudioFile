@@ -17,8 +17,8 @@ jobs:
       - name: Install base-devel
         run: sudo pacman -Sy --noconfirm base-devel python python-pip
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Install Python dependencies from setup.py
+        run: pip install .  # This installs the package and its dependencies from setup.py
 
       - name: Build the package
         run: makepkg -si --noconfirm
