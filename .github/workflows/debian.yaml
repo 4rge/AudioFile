@@ -17,13 +17,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.x'  # Specify the Python version needed
 
       - name: Install build dependencies
         run: sudo apt-get install -y devscripts debhelper python3-venv python3-pip
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Install Python dependencies from setup.py
+        run: pip install .  # Installs the package and dependencies from setup.py
 
       - name: Build the package
         run: |
@@ -34,7 +34,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: 'v1.0.0'  # Set your versioning scheme
+          tag_name: 'v1.0.0'  # Set your desired versioning scheme
           release_name: '${{ github.event.repository.name }} - Version 1.0.0'
           draft: false
           prerelease: false
@@ -45,6 +45,6 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ../*.deb  # Adjust to the actual output location
+          asset_path: ../*.deb  # Adjust to the actual output location for the .deb file
           asset_name: music_downloader.deb  # Specify a proper name for your asset
           asset_content_type: application/vnd.debian.binary
