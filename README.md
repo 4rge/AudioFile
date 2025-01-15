@@ -35,13 +35,13 @@ Afterward you can continue to usege.
 ## Usage
 
 **Run the script**:
-```python music_downloader.py```
+```python audiofile.py```
 
 Follow the prompts to enter the artist name and album title.
 Choose whether to download the tracks after they have been fetched.
 
 #### Example:
-`Welcome to the Music Downloader CLI!
+`Welcome to AudioFile CLI!
 Enter the artist name: The Beatles
 Enter the album name: Abbey Road
 Found tracks: ['Come Together', 'Something', 'Maxwell\'s Silver Hammer', ...]
