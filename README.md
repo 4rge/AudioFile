@@ -20,7 +20,7 @@ A CLI tool that allows users to download music tracks from an album by an artist
 
 You can install the required packages via pip:
 
-```pip install yt-dlp beautifulsoup4 wikipedia-api plyer```
+```pip install yt-dlp beautifulsoup4 wikipedia plyer```
 
 ## Setup
 
