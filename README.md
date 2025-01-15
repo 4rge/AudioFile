@@ -35,7 +35,7 @@ Afterward you can continue to usege.
 ## Usage
 
 **Run the script**:
-```python audiofile.py```
+```python3 audiofile```
 
 Follow the prompts to enter the artist name and album title.
 Choose whether to download the tracks after they have been fetched.
